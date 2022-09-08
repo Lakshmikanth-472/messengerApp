@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import '../chatPage.dart';
 // void main() {
 //   runApp(MyApp());
 // }
@@ -8,22 +10,30 @@ import 'package:flutter/material.dart';
   Widget build(BuildContext context) {
   // 
   return Scaffold(
-  appBar: AppBar(
-    title: const Text('BottomNavigationBar Demo'),
-  ),
+  // 
+  body: ChatPage(),
+  
   bottomNavigationBar: BottomNavigationBar(
     items: const <BottomNavigationBarItem>[
       BottomNavigationBarItem(
        icon: Icon(Icons.chat),
         label: 'Chats',
       ),
+      // BottomNavigationBarItem(
+      //   icon: Icon(Icons.camera),
+      //   label: 'Camera',
+      
+    BottomNavigationBarItem(
+            icon: Icon(Icons.group_work),
+            label: "Channels",
+          ),
+      
+      // BottomNavigationBarItem(
+      //   icon: Icon(Icons.chat),
+      //   label: 'Chats',
       BottomNavigationBarItem(
-        icon: Icon(Icons.camera),
-        label: 'Camera',
-      ),
-      BottomNavigationBarItem(
-        icon: Icon(Icons.chat),
-        label: 'Chats',
+            icon: Icon(Icons.account_box),
+            label: "Profile",
       ),
     ],
   ),
